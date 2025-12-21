@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: '✉',
     label: 'Email',
-    value: 'info@fleurigthus.nl',
-    href: 'mailto:info@fleurigthus.nl',
+    value: 'fleurigthus@gmail.com',
+    href: 'mailto:fleurigthus@gmail.com',
   },
   {
     icon: '☎',
