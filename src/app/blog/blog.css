@@ -7,20 +7,16 @@
 
 .blog-title {
   font-size: clamp(3rem, 10vw, 8rem);
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
-.blog-title .title-line-wrapper {
+.blog-title-line {
+  display: block;
   overflow: hidden;
-  display: block;
 }
 
-.blog-title span {
-  display: block;
-}
-
-.blog-title .accent {
+.blog-title-line.accent {
   font-style: italic;
   color: var(--color-mauve);
 }
