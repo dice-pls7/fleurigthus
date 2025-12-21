@@ -33,7 +33,7 @@
 .hero-title {
   font-size: clamp(4rem, 15vw, 12rem);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1.2;
   letter-spacing: -0.04em;
   margin-bottom: 2rem;
 }
@@ -204,6 +204,75 @@
   opacity: 0.8;
 }
 
+/* About Me Section */
+.about-section {
+  padding: 10rem 0;
+  background: var(--color-blush);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.about-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-dusty-rose) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-image-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.image-icon {
+  font-size: 6rem;
+  color: var(--color-cream);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-soft-black);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+  opacity: 0.9;
+}
+
+.about-text:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
 /* Services Section */
 .services-section {
   padding: 8rem 0;
@@ -363,6 +432,11 @@
     gap: 3rem;
   }
 
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -385,6 +459,14 @@
   .hero-cta {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-section {
+    padding: 6rem 0;
+  }
+
+  .about-grid {
+    gap: 3rem;
   }
 
   .service-link {

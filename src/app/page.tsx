@@ -6,6 +6,8 @@ import Link from 'next/link'
 import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
 import ParallaxSection from '@/components/ParallaxSection'
+import Image from 'next/image'
+import imageOfKeke from '../../public/images/Fotokeke.jpg'
 
 const services = [
   {
@@ -211,6 +213,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Me Section */}
+      <section className="about-section">
+        <div className="container">
+          <div className="about-grid">
+            <motion.div
+              className="about-image"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
+            >
+              <div className="about-image-wrapper">
+                             
+                <Image
+                  src={imageOfKeke}
+                  alt="Foto keke"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
+            </motion.div>
+
+            <div className="about-content">
+              <RevealText delay={0.1}>
+                <h2 className="about-title">Over Mij</h2>
+              </RevealText>
+              <RevealText delay={0.2}>
+                <p className="about-text">
+                  Hallo! Ik ben Keke, ik ben opgegroeid met de overtuiging dat we elkaar moeten helpen 
+                  en ondersteunen. Deze waarden vormen de kern van Fleurig Thús.
+                </p>
+              </RevealText>
+              <RevealText delay={0.3}>
+                <p className="about-text">
+                  Met jaren ervaring in huishoudelijke hulp, weet ik dat het niet alleen 
+                  gaat om een schoon huis. Het gaat om verbinding maken, vertrouwen opbouwen, 
+                  en iemand het gevoel geven dat ze er niet alleen voor staan.
+                </p>
+              </RevealText>
+              <RevealText delay={0.4}>
+                <p className="about-text">
+                  Ik geloof in persoonlijke aandacht en maatwerk. Elke klant is uniek en 
+                  verdient een aanpak die bij hen past. Samen maken we van uw huis een 
+                  plek waar u zich echt thuis voelt.
+                </p>
+              </RevealText>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="services-section">
         <div className="container">
@@ -220,7 +274,7 @@ export default function Home() {
             </RevealText>
             <RevealText delay={0.1}>
               <h2 className="services-title">
-                Wat wij voor u kunnen betekenen
+                Wat ik voor u kan betekenen
               </h2>
             </RevealText>
           </div>
@@ -275,7 +329,7 @@ export default function Home() {
               Klaar voor een <em>fleurig</em> thuis?
             </h2>
             <p className="cta-text">
-              Neem vrijblijvend contact op en ontdek wat wij voor u kunnen betekenen.
+              Neem vrijblijvend contact op en ontdek wat ik voor u kan betekenen.
             </p>
             <MagneticButton href="/contact" variant="outline" dataCursor="Start">
               Start vandaag
