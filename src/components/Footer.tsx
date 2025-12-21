@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="footer-column">
               <h4>Contact</h4>
               <div className="footer-contact">
-                <a href="mailto:info@fleurigthus.nl">info@fleurigthus.nl</a>
+                <a href="mailto:fleurigthus@gmail.com">fleurigthus@gmail.com</a>
                 <a href="tel:+31612345678">+31 6 1234 5678</a>
                 <span>Friesland, Nederland</span>
               </div>
