@@ -6,7 +6,6 @@ import Link from 'next/link'
 import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
 import ParallaxSection from '@/components/ParallaxSection'
-import './home.css'
 
 const services = [
   {

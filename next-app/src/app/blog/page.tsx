@@ -5,7 +5,6 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import RevealText from '@/components/RevealText'
 import MagneticButton from '@/components/MagneticButton'
-import './blog.css'
 
 const categories = ['Alles', 'Tips', 'Verhalen', 'Nieuws']
 

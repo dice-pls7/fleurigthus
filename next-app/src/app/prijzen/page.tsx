@@ -4,7 +4,6 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
-import './prijzen.css'
 
 const packages = [
   {

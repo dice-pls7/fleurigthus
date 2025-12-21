@@ -4,7 +4,6 @@ import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
-import './contact.css'
 
 const contactInfo = [
   {
