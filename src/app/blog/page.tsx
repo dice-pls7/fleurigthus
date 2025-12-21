@@ -90,16 +90,16 @@ export default function Blog() {
           <h1 className="blog-title">
             <motion.span
               className="blog-title-line"
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.6, 0.05, 0.01, 0.9] as const }}
             >
               Verhalen &
             </motion.span>
             <motion.span
               className="blog-title-line accent"
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.6, 0.05, 0.01, 0.9] as const }}
             >
               inzichten
