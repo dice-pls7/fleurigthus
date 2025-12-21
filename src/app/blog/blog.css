@@ -11,6 +11,11 @@
   margin-bottom: 1.5rem;
 }
 
+.blog-title .title-line-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
 .blog-title span {
   display: block;
 }

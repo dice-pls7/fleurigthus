@@ -88,21 +88,25 @@ export default function Blog() {
             Blog
           </motion.span>
           <h1 className="blog-title">
-            <motion.span
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.6, 0.05, 0.01, 0.9] }}
-            >
-              Verhalen &
-            </motion.span>
-            <motion.span
-              className="accent"
-              initial={{ y: '100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: [0.6, 0.05, 0.01, 0.9] }}
-            >
-              inzichten
-            </motion.span>
+            <div className="title-line-wrapper">
+              <motion.span
+                initial={{ y: '100%', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.6, 0.05, 0.01, 0.9] as const }}
+              >
+                Verhalen &
+              </motion.span>
+            </div>
+            <div className="title-line-wrapper">
+              <motion.span
+                className="accent"
+                initial={{ y: '100%', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.6, 0.05, 0.01, 0.9] as const }}
+              >
+                inzichten
+              </motion.span>
+            </div>
           </h1>
           <motion.p
             className="blog-subtitle"
