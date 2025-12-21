@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, ReactNode, ElementType } from 'react'
+import { useRef, ReactNode, ElementType, ComponentType } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 interface RevealTextProps {
@@ -38,7 +38,7 @@ const RevealText = ({
     },
   }
 
-  const MotionComponent = motion[as as keyof typeof motion] || motion.div
+  const MotionComponent = (motion[as as keyof typeof motion] || motion.div) as ComponentType<any>
 
   return (
     <div 

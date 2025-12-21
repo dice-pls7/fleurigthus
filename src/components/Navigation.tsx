@@ -34,7 +34,7 @@ const Navigation = () => {
     closed: {
       clipPath: 'circle(0% at calc(100% - 40px) 40px)',
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 400,
         damping: 40,
       },
@@ -42,7 +42,7 @@ const Navigation = () => {
     open: {
       clipPath: 'circle(150% at calc(100% - 40px) 40px)',
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 20,
         restDelta: 2,
       },
@@ -57,7 +57,7 @@ const Navigation = () => {
       transition: {
         delay: i * 0.1 + 0.3,
         duration: 0.8,
-        ease: [0.6, 0.05, 0.01, 0.9],
+        ease: [0.6, 0.05, 0.01, 0.9] as const,
       },
     }),
   }
@@ -68,7 +68,7 @@ const Navigation = () => {
         className={`nav-header ${isScrolled ? 'scrolled' : ''}`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
+        transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] as const }}
       >
         <div className="nav-container">
           <Link href="/" className="nav-logo">
