@@ -1,3 +1,7 @@
+.magnetic-button-wrapper {
+  display: inline-block;
+}
+
 .magnetic-button {
   position: relative;
   display: inline-flex;
