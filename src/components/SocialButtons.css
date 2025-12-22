@@ -1,0 +1,77 @@
+.social-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.social-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+.social-button.whatsapp {
+  background: rgba(168, 132, 132, 0.9);
+}
+
+.social-button.instagram {
+  background: rgba(168, 132, 132, 0.85);
+}
+
+.social-button.facebook {
+  background: rgba(168, 132, 132, 0.8);
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-button.whatsapp:hover {
+  background: rgba(168, 132, 132, 1);
+}
+
+.social-button.instagram:hover {
+  background: rgba(168, 132, 132, 0.95);
+}
+
+.social-button.facebook:hover {
+  background: rgba(168, 132, 132, 0.9);
+}
+
+.social-button svg {
+  width: 28px;
+  height: 28px;
+  color: #f5f1ed;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .social-buttons {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .social-button {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-button svg {
+    width: 26px;
+    height: 26px;
+  }
+}
