@@ -7,6 +7,7 @@ import './blog/blog.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CustomCursor from '@/components/CustomCursor'
+import SocialButtons from '@/components/SocialButtons'
 import { PageTransitionProvider } from '@/components/PageTransition'
 import { Analytics } from '@vercel/analytics/next'
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <div className="grain-overlay" />
           <CustomCursor />
           <Navigation />
+          <SocialButtons />
           <main>
             <PageTransitionProvider>
               {children}
