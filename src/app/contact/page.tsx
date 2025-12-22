@@ -4,13 +4,14 @@ import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
+import { useObfuscatedEmail } from '@/components/ObfuscatedEmail'
 
 const contactInfo = [
   {
     icon: '✉',
     label: 'Email',
-    value: 'fleurigthus@gmail.com',
-    href: 'mailto:fleurigthus@gmail.com',
+    value: 'email', // Will be replaced dynamically
+    href: 'mailto:email', // Will be replaced dynamically
   },
   {
     icon: '☎',
@@ -27,6 +28,7 @@ const contactInfo = [
 ]
 
 export default function Contact() {
+  const email = useObfuscatedEmail()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -126,33 +128,38 @@ export default function Contact() {
                   visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
                 }}
               >
-                {contactInfo.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="contact-item"
-                    variants={{
-                      hidden: { opacity: 0, x: -30 },
-                      visible: { 
-                        opacity: 1, 
-                        x: 0,
-                        transition: { duration: 0.5, ease: [0.6, 0.05, 0.01, 0.9] },
-                      },
-                    }}
-                    whileHover={{ x: 10 }}
-                  >
-                    <span className="contact-icon">{item.icon}</span>
-                    <div className="contact-item-content">
-                      <span className="contact-label">{item.label}</span>
-                      {item.href ? (
-                        <a href={item.href} className="contact-value" data-cursor="Click">
-                          {item.value}
-                        </a>
-                      ) : (
-                        <span className="contact-value">{item.value}</span>
-                      )}
-                    </div>
-                  </motion.div>
-                ))}
+                {contactInfo.map((item, index) => {
+                  const displayValue = item.label === 'Email' ? email : item.value
+                  const displayHref = item.label === 'Email' ? `mailto:${email}` : item.href
+                  
+                  return (
+                    <motion.div
+                      key={index}
+                      className="contact-item"
+                      variants={{
+                        hidden: { opacity: 0, x: -30 },
+                        visible: { 
+                          opacity: 1, 
+                          x: 0,
+                          transition: { duration: 0.5, ease: [0.6, 0.05, 0.01, 0.9] },
+                        },
+                      }}
+                      whileHover={{ x: 10 }}
+                    >
+                      <span className="contact-icon">{item.icon}</span>
+                      <div className="contact-item-content">
+                        <span className="contact-label">{item.label}</span>
+                        {displayHref ? (
+                          <a href={displayHref} className="contact-value" data-cursor="Click">
+                            {displayValue}
+                          </a>
+                        ) : (
+                          <span className="contact-value">{displayValue}</span>
+                        )}
+                      </div>
+                    </motion.div>
+                  )
+                })}
               </motion.div>
 
               {/* Availability */}

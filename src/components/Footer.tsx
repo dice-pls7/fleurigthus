@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { ObfuscatedEmail } from './ObfuscatedEmail'
 import './Footer.css'
 
 const Footer = () => {
@@ -61,7 +62,7 @@ const Footer = () => {
             <div className="footer-column">
               <h4>Contact</h4>
               <div className="footer-contact">
-                <a href="mailto:fleurigthus@gmail.com">fleurigthus@gmail.com</a>
+                <ObfuscatedEmail />
                 <a href="tel:+31612345678">+31 6 1234 5678</a>
                 <span>Friesland, Nederland</span>
               </div>
