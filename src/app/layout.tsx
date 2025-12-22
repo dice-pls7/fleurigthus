@@ -8,6 +8,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CustomCursor from '@/components/CustomCursor'
 import { PageTransitionProvider } from '@/components/PageTransition'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'Fleurig Thús - Huishoudelijke hulp met een hart',
@@ -38,6 +39,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   )
