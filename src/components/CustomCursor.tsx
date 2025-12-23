@@ -26,23 +26,45 @@ const CustomCursor = () => {
     const handleMouseEnter = () => setIsVisible(true)
     const handleMouseLeave = () => setIsVisible(false)
 
+    // Track listeners so we can remove them
+    const elementListeners = new Map<Element, { enter: () => void; leave: () => void }>()
+
     // Add hover detection for interactive elements
     const addHoverListeners = () => {
+      // Remove old listeners
+      elementListeners.forEach((listeners, el) => {
+        el.removeEventListener('mouseenter', listeners.enter)
+        el.removeEventListener('mouseleave', listeners.leave)
+      })
+      elementListeners.clear()
+
       const interactiveElements = document.querySelectorAll('a, button, [data-cursor]')
       
       interactiveElements.forEach((el) => {
-        el.addEventListener('mouseenter', () => {
+        const enterListener = () => {
           setIsHovering(true)
           setCursorText((el as HTMLElement).getAttribute('data-cursor') || '')
-        })
-        el.addEventListener('mouseleave', () => {
+        }
+        const leaveListener = () => {
           setIsHovering(false)
           setCursorText('')
-        })
+        }
+
+        el.addEventListener('mouseenter', enterListener)
+        el.addEventListener('mouseleave', leaveListener)
+        
+        elementListeners.set(el, { enter: enterListener, leave: leaveListener })
       })
     }
 
+    // Reset cursor state on click
+    const handleClick = () => {
+      setIsHovering(false)
+      setCursorText('')
+    }
+
     window.addEventListener('mousemove', moveCursor)
+    window.addEventListener('click', handleClick)
     document.addEventListener('mouseenter', handleMouseEnter)
     document.addEventListener('mouseleave', handleMouseLeave)
 
@@ -53,9 +75,16 @@ const CustomCursor = () => {
 
     return () => {
       window.removeEventListener('mousemove', moveCursor)
+      window.removeEventListener('click', handleClick)
       document.removeEventListener('mouseenter', handleMouseEnter)
       document.removeEventListener('mouseleave', handleMouseLeave)
       observer.disconnect()
+      
+      // Clean up all element listeners
+      elementListeners.forEach((listeners, el) => {
+        el.removeEventListener('mouseenter', listeners.enter)
+        el.removeEventListener('mouseleave', listeners.leave)
+      })
     }
   }, [cursorX, cursorY])
 
