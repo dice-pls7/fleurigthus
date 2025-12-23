@@ -1,0 +1,135 @@
+/* Services Hero */
+.services-hero {
+  padding: 12rem 0 6rem;
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-blush) 100%);
+  text-align: center;
+}
+
+.services-title {
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.services-title-line {
+  display: block;
+  overflow: hidden;
+}
+
+.services-title-line.accent {
+  font-style: italic;
+  color: var(--color-mauve);
+}
+
+.services-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--color-charcoal);
+  opacity: 0.8;
+}
+
+/* Services Content */
+.services-content {
+  padding: 6rem 0;
+  background: var(--color-cream);
+}
+
+.service-section {
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 3rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.4s ease;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+
+.service-section:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.service-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-charcoal);
+  line-height: 1.3;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.service-text.strong {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.service-benefits li {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #2c2c2c;
+  padding-left: 0;
+  font-weight: 500;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.service-list li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.service-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.75rem;
+  color: #8b7355;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 10rem 0 4rem;
+  }
+
+  .services-content {
+    padding: 4rem 0;
+  }
+
+  .service-section {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-heading {
+    font-size: 1.5rem;
+  }
+
+  .service-text,
+  .service-benefits li,
+  .service-list li {
+    font-size: 1rem;
+  }
+}
