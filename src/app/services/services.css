@@ -1,14 +1,14 @@
 /* Services Hero */
 .services-hero {
-  padding: 12rem 0 6rem;
+  padding: 6rem 0 3rem;
   background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-blush) 100%);
   text-align: center;
 }
 
 .services-title {
   font-size: clamp(3rem, 10vw, 8rem);
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .services-title-line {
@@ -29,7 +29,7 @@
 
 /* Services Content */
 .services-content {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background: var(--color-cream);
 }
 
@@ -37,7 +37,6 @@
   background: var(--color-white);
   border-radius: 24px;
   padding: 3rem;
-  margin-bottom: 2.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.4s ease;
   max-width: 900px;
@@ -111,7 +110,7 @@
 
 @media (max-width: 768px) {
   .services-hero {
-    padding: 10rem 0 4rem;
+    padding: 10rem 0 4rem; 
   }
 
   .services-content {
