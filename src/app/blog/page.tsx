@@ -5,65 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import RevealText from '@/components/RevealText'
 import MagneticButton from '@/components/MagneticButton'
+import { blogPosts } from '@/data/blogPosts'
 
 const categories = ['Alles', 'Tips', 'Verhalen', 'Nieuws']
-
-const blogPosts = [
-  {
-    id: 1,
-    category: 'Tips',
-    title: '10 Tips voor een opgeruimd huis',
-    excerpt: 'Ontdek eenvoudige manieren om uw huis georganiseerd te houden, ook met een druk leven.',
-    date: '15 Dec 2024',
-    readTime: '5 min',
-    featured: true,
-  },
-  {
-    id: 2,
-    category: 'Verhalen',
-    title: 'De kracht van verbinding',
-    excerpt: 'Waarom persoonlijk contact zo belangrijk is in huishoudelijke hulp.',
-    date: '10 Dec 2024',
-    readTime: '4 min',
-    featured: false,
-  },
-  {
-    id: 3,
-    category: 'Tips',
-    title: 'Natuurlijke schoonmaakmiddelen',
-    excerpt: 'Maak uw eigen milieuvriendelijke schoonmaakproducten met ingrediënten uit de keuken.',
-    date: '5 Dec 2024',
-    readTime: '6 min',
-    featured: false,
-  },
-  {
-    id: 4,
-    category: 'Nieuws',
-    title: 'Fleurig Thús groeit',
-    excerpt: 'Een update over onze diensten en de groeiende vraag naar persoonlijke huishoudelijke hulp.',
-    date: '1 Dec 2024',
-    readTime: '3 min',
-    featured: false,
-  },
-  {
-    id: 5,
-    category: 'Verhalen',
-    title: 'Van nergens naar iets',
-    excerpt: 'Mijn persoonlijke reis en waarom ik geloof in het helpen van anderen.',
-    date: '25 Nov 2024',
-    readTime: '7 min',
-    featured: true,
-  },
-  {
-    id: 6,
-    category: 'Tips',
-    title: 'De perfecte schoonmaakroutine',
-    excerpt: 'Hoe u een effectieve wekelijkse schoonmaakroutine kunt opzetten.',
-    date: '20 Nov 2024',
-    readTime: '5 min',
-    featured: false,
-  },
-]
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('Alles')
@@ -146,12 +90,14 @@ export default function Blog() {
                   <span className="post-separator">•</span>
                   <span className="post-read-time">{featuredPost.readTime} leestijd</span>
                 </div>
-                <MagneticButton variant="secondary" className="featured-cta" dataCursor="Lees">
-                  Lees artikel
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </MagneticButton>
+                <Link href={`/blog/${featuredPost.slug}`}>
+                  <MagneticButton variant="secondary" className="featured-cta" dataCursor="Lees">
+                    Lees artikel
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </MagneticButton>
+                </Link>
               </div>
             </motion.article>
           </div>
@@ -249,6 +195,7 @@ export default function Blog() {
 interface BlogCardProps {
   post: {
     id: number
+    slug: string
     category: string
     title: string
     excerpt: string
@@ -271,7 +218,7 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -10 }}
     >
-      <Link href="#" className="blog-card-link" data-cursor="Lees">
+      <Link href={`/blog/${post.slug}`} className="blog-card-link" data-cursor="Lees">
         <div className="blog-card-image">
           <motion.div
             className="blog-card-image-inner"
