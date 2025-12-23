@@ -11,6 +11,7 @@ const navItems = [
   { path: '/prijzen', label: 'Prijzen' },
   { path: '/contact', label: 'Contact' },
   { path: '/blog', label: 'Blog' },
+  { path: '/services', label: 'Services' },
 ]
 
 const Navigation = () => {
