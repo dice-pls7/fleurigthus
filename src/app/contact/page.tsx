@@ -102,7 +102,11 @@ export default function Contact() {
             >
               {contactInfo.map((item, index) => {
                 const displayValue = item.label === 'Email' ? email : item.value
-                const displayHref = item.label === 'Email' ? `mailto:${email}` : item.href
+                const displayHref = item.label === 'Email' 
+                  ? `mailto:${email}?subject=Vraag over schoonmaakdiensten&body=Hoi Keke!%0D%0A%0D%0A
+                  Ik heb interesse/een vraag over [Uw onderwerp/vraag]%0D%0A%0D%0A
+                  Met vriendelijke groet,%0D%0A [Uw naam]` 
+                  : item.href
                 
                 return (
                   <motion.div
@@ -146,7 +150,7 @@ export default function Contact() {
               <div className="availability-grid">
                 <div className="availability-item">
                   <span className="day">Ma - Vr</span>
-                  <span className="time">08:00 - 18:00</span>
+                  <span className="time">09:00 - 17:00</span>
                 </div>
                 <div className="availability-item">
                   <span className="day">Za</span>
