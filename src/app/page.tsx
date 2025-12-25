@@ -23,7 +23,7 @@ const services = [
   {
     number: '03',
     title: 'Strijkservice',
-    description: 'Uw was netjes gevouwen en gestreken retour.',
+    description: 'Uw was netjes gevouwen en gestreken.',
   },
   {
     number: '04',
