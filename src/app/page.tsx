@@ -109,7 +109,7 @@ export default function Home() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </MagneticButton>
-              <MagneticButton variant="secondary" href="/prijzen">
+              <MagneticButton variant="secondary" href="/prijzen" dataCursor="Bekijk">
                 Bekijk prijzen
               </MagneticButton>
             </motion.div>
@@ -298,7 +298,6 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, ease: [0.6, 0.05, 0.01, 0.9] }}
             >
-              <span className="quote-mark">"</span>
               <p>
                 Elkaar helpen is essentieel. In Nederland en in de rest van de wereld. 
                 <em> Niemand hoeft het alleen te doen.</em>
