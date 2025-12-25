@@ -6,46 +6,45 @@ import MagneticButton from '@/components/MagneticButton'
 import RevealText from '@/components/RevealText'
 
 const packages = [
-  {
-    name: 'Basis',
-    price: '25',
+   {
+    name: 'Organizing & Opruimhulp',
+    price: '35',
     unit: 'per uur',
-    description: 'Perfect voor regelmatige schoonmaak',
+    description: 'Opruimen, structuur, rust in huis & hoofd',
     features: [
-      'Algemene schoonmaak',
-      'Stofzuigen & dweilen',
-      'Sanitair reinigen',
-      'Keuken schoonmaken',
-      'Flexibele planning',
+      '€35 per uur',
+      'Opruimsessie (3 uur): €95',
+      'Dagdeel (4 uur): €125',
+      'Praktische indeling & tips',
+      'Kasten & kleding organiseren',
     ],
     highlight: false,
   },
   {
-    name: 'Uitgebreid',
-    price: '30',
-    unit: 'per uur',
-    description: 'Inclusief extra diensten',
+    name: 'Huishoudelijke Hulp',
+    price: 'Vanaf €23',
+    unit: 'Per uur',
+    description: 'Persoonlijke en betrouwbare huishoudelijke hulp, afgestemd op jouw wensen en situatie',
     features: [
-      'Alles van Basis pakket',
-      'Ramen lappen (binnenzijde)',
-      'Strijkservice',
-      'Beddengoed verschonen',
-      'Koelkast reinigen',
-      'Oven schoonmaken',
+      'Minimale werktijden: 2 uur',
+      'Met aandacht, zorg en respect',
+      'Samen kijken naar wat jij nodig hebt',
+      'Vrijblijvend informatie opvragen'
     ],
     highlight: true,
   },
+ 
   {
-    name: 'Op Maat',
-    price: 'Offerte',
-    unit: 'op aanvraag',
-    description: 'Volledig afgestemd op uw wensen',
+    name: 'Verhuizingsschoonmaak',
+    price: 'Vanaf €200',
+    unit: 'per project',
+    description: 'Grondige schoonmaak bij verhuizing, voor een frisse start of nette oplevering',
     features: [
-      'Persoonlijk gesprek',
-      'Maatwerk oplossing',
-      'Combinatie van diensten',
-      'Speciale wensen mogelijk',
-      'Langdurige samenwerking',
+      'Afhankelijk van grootte & vervuiling',
+      'Appartement: vanaf €200',
+      'Eengezinswoning: vanaf €250',
+      'Grondige eindschoonmaak',
+      'Perfect voor oplevering',
     ],
     highlight: false,
   },
@@ -281,7 +280,7 @@ const PriceCard = ({ pkg }: PriceCardProps) => {
         <p className="price-description">{pkg.description}</p>
       </div>
       <div className="price-amount">
-        {pkg.price !== 'Offerte' && <span className="price-currency">€</span>}
+        {pkg.price !== 'Offerte' && !pkg.price.includes('Vanaf') && <span className="price-currency">€</span>}
         <span className="price-value">{pkg.price}</span>
         <span className="price-unit">{pkg.unit}</span>
       </div>
