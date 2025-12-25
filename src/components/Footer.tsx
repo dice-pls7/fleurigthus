@@ -56,6 +56,7 @@ const Footer = () => {
                 <Link href="/prijzen">Prijzen</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/blog">Blog</Link>
+                <Link href="/services">Services</Link>
               </nav>
             </div>
 
@@ -73,7 +74,6 @@ const Footer = () => {
               <div className="footer-social">
                 <a href="#" data-cursor="Volg">Instagram</a>
                 <a href="#" data-cursor="Volg">Facebook</a>
-                <a href="#" data-cursor="Volg">LinkedIn</a>
               </div>
             </div>
           </div>
