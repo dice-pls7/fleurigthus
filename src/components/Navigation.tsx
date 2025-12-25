@@ -11,7 +11,7 @@ const navItems = [
   { path: '/prijzen', label: 'Prijzen' },
   { path: '/contact', label: 'Contact' },
   { path: '/blog', label: 'Blog' },
-  { path: '/services', label: 'Services' },
+  { path: '/services', label: 'Services' }, 
 ]
 
 const Navigation = () => {
@@ -87,6 +87,7 @@ const Navigation = () => {
                 key={item.path}
                 href={item.path}
                 className={`nav-link ${pathname === item.path ? 'active' : ''}`}
+                data-cursor={item.label}
               >
                 <motion.span
                   whileHover={{ y: -2 }}
