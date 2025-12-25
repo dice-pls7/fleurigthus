@@ -63,7 +63,7 @@ const Footer = () => {
               <h4>Contact</h4>
               <div className="footer-contact">
                 <ObfuscatedEmail />
-                <a href="tel:+31612345678">+31 6 1234 5678</a>
+                <a href="tel:+31617539583">+31 6 17539583</a>
                 <span>Friesland, Nederland</span>
               </div>
             </div>
