@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import MagneticButton from '@/components/MagneticButton'
 import './services.css';
 
 export default function ServicesPage() {
@@ -126,6 +128,39 @@ export default function ServicesPage() {
             Samen creëren we een huis dat rust, ruimte en overzicht geeft.
           </p>
         </section>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section">
+        <div className="container">
+          <motion.div
+            className="cta-content"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { 
+                opacity: 1, 
+                y: 0, 
+                transition: { duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] },
+              },
+            }}
+          >
+            <h2 className="cta-title">
+              Klaar voor een <em>fleurig</em> thuis?
+            </h2>
+            <p className="cta-text">
+              Neem vrijblijvend contact op en ontdek wat ik voor u kan betekenen.
+            </p>
+            <MagneticButton href="/contact" variant="outline" dataCursor="Start">
+              Start vandaag
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </MagneticButton>
+          </motion.div>
         </div>
       </section>
     </>
