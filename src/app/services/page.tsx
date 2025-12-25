@@ -51,7 +51,7 @@ export default function ServicesPage() {
         <div className="container">
 
         <section className="service-section">
-          <h2 className="service-heading">🧺 Was- & Strijkservice aan Huis</h2>
+          <h2 className="service-heading">🧺 Was & Strijkservice aan Huis</h2>
           <p className="service-text">
             Geen tijd of energie voor de was? Fleurig Thús komt bij u aan huis wassen en strijken, met uw eigen wasmachine en middelen.
           </p>
