@@ -92,9 +92,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              Niet alleen een schoon huis, maar een thuis waar 
+              Professionele schoonmaakster en huishoudelijke hulp in Leeuwarden en omgeving.
               <br />
-              <em>iemand zich gezien voelt</em>
+              Niet alleen een schoon huis, maar een thuis waar <em>iemand zich gezien voelt</em>
             </motion.p>
 
             <motion.div
