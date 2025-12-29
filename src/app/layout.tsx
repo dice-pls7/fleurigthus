@@ -14,6 +14,9 @@ import { Analytics } from '@vercel/analytics/next'
 export const metadata: Metadata = {
   title: 'Fleurig Thús - Huishoudelijke hulp met een hart',
   description: 'Niet alleen een schoon huis, maar een thuis waar iemand zich gezien voelt. Huishoudelijke hulp met aandacht, warmte en menselijkheid.',
+  icons: {
+    icon: '/FleurigThusFavIcon2.png',
+  },
 }
 
 export default function RootLayout({
