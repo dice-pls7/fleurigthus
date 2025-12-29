@@ -12,13 +12,16 @@ import { PageTransitionProvider } from '@/components/PageTransition'
 import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
-  title: 'Fleurig Thús - Huishoudelijke hulp met een hart',
-  description: 'Niet alleen een schoon huis, maar een thuis waar iemand zich gezien voelt. Huishoudelijke hulp met aandacht, warmte en menselijkheid.',
+  title: 'Fleurig Thús - Huishoudelijke hulp met een hart | Leeuwarden | Friesland',
+  description: 'Niet alleen een schoon huis, maar een thuis waar iemand zich gezien voelt. Huishoudelijke hulp met aandacht, warmte en menselijkheid. Huishoudelijke hulp in Leeuwarden en omgeving.',
+  keywords: 'huishoudelijke hulp, schoonmaakdienst, poetshulp, huishoudster, strijkservice, thuiszorg, schoonmaak aan huis, persoonlijke verzorging',
   icons: {
     icon: '/FleurigThusFavIcon2.png',
     apple: '/FleurigThusFavIcon2.png',
   },
   openGraph: {
+    title: 'Fleurig Thús - Huishoudelijke hulp met een hart',
+    description: 'Huishoudelijke hulp met aandacht, warmte en menselijkheid.',
     images: ['/FleurigThusFavIcon2.png'],
   },
 }
