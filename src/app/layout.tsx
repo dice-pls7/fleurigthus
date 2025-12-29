@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   description: 'Niet alleen een schoon huis, maar een thuis waar iemand zich gezien voelt. Huishoudelijke hulp met aandacht, warmte en menselijkheid.',
   icons: {
     icon: '/FleurigThusFavIcon2.png',
+    apple: '/FleurigThusFavIcon2.png',
+  },
+  openGraph: {
+    images: ['/FleurigThusFavIcon2.png'],
   },
 }
 
