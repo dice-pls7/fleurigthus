@@ -265,27 +265,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="services-section">
-        <div className="container">
-          <div className="services-header">
-            <RevealText>
-              <span className="section-label">Diensten</span>
-            </RevealText>
-            <RevealText delay={0.1}>
-              <h2 className="services-title">
-                Wat ik voor u kan betekenen
-              </h2>
-            </RevealText>
-          </div>
-
-          <div className="services-list">
-            {services.map((service, index) => (
-              <ServiceItem key={index} service={service} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Quote Section */}
       <section className="quote-section">
