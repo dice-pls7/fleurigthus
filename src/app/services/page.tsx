@@ -128,6 +128,36 @@ export default function ServicesPage() {
             Samen creëren we een huis dat rust, ruimte en overzicht geeft.
           </p>
         </section>
+
+        <section className="service-section">
+          <h2 className="service-heading">Kantoor & Airbnb Schoonmaak (op aanvraag)</h2>
+          <p className="service-text">
+            Betrouwbare en flexibele schoonmaak voor kantoren en Airbnb-accommodaties.
+          </p>
+          <p className="service-text">
+            Geschikt voor zowel vaste schoonmaakmomenten als tijdelijke vervanging bij uitval van een vaste schoonmaakster.
+          </p>
+          <p className="service-text strong">Wij verzorgen o.a.:</p>
+          <ul className="service-list">
+            <li>Kantoren, praktijken en werkruimtes</li>
+            <li>Airbnb & short-stay accommodaties</li>
+            <li>Wisselschoonmaak tussen gasten</li>
+            <li>Inzet bij ziekte of onverwachte uitval</li>
+            <li>Mogelijkheid tot vaste schoonmaakdagen</li>
+          </ul>
+          <p className="service-text">
+            Elke locatie en situatie is anders.
+            Daarom werken wij met een vrijblijvende offerte, afgestemd op jouw wensen en planning.
+          </p>
+          <div style={{ marginTop: '2rem' }}>
+            <MagneticButton href="/contact" variant="primary" dataCursor="Contact">
+              Vraag vrijblijvend een offerte aan
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </MagneticButton>
+          </div>
+        </section>
         </div>
       </section>
 
