@@ -78,10 +78,17 @@ export default function Blog() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="featured-badge">Uitgelicht</span>
+                  {featuredPost.image && (
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      style={{ width: '100%', height: '100%', maxHeight: '800px', objectFit: 'cover' }}
+                    />
+                  )}
                 </motion.div>
               </div>
               <div className="featured-content">
+                {/* <span className="featured-badge">Uitgelicht</span> */}
                 <span className="post-category">{featuredPost.category}</span>
                 <h2 className="featured-title">{featuredPost.title}</h2>
                 <p className="featured-excerpt">{featuredPost.excerpt}</p>
@@ -202,6 +209,7 @@ interface BlogCardProps {
     date: string
     readTime: string
     featured: boolean
+    image?: string
   }
   index: number
 }
@@ -224,7 +232,15 @@ const BlogCard = ({ post, index }: BlogCardProps) => {
             className="blog-card-image-inner"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.6 }}
-          />
+          >
+            {post.image && (
+              <img 
+                src={post.image} 
+                alt={post.title}
+                style={{ width: '450px', height: '100%', maxHeight: '400px', objectFit: 'cover', display: 'block' }}
+              />
+            )}
+          </motion.div>
         </div>
         <div className="blog-card-content">
           <span className="post-category">{post.category}</span>

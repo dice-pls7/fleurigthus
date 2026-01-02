@@ -44,6 +44,23 @@ export default function BlogPost({ params }: { params: Promise<{ slug: string }>
         </div>
       </section>
 
+      {/* Featured Image */}
+      {post.image && (
+        <section className="blog-post-image-section" style={{ padding: 0 }}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <img 
+              src={post.image} 
+              alt={post.title}
+              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover', display: 'block' }}
+            />
+          </motion.div>
+        </section>
+      )}
+
       {/* Content */}
       <section className="blog-post-content">
         <div className="container">
