@@ -55,7 +55,7 @@ export default function BlogPost({ params }: { params: Promise<{ slug: string }>
             <img 
               src={post.image} 
               alt={post.title}
-              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover', display: 'block' }}
+              style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'cover', display: 'block' }}
             />
           </motion.div>
         </section>
