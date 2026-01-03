@@ -10,6 +10,7 @@ import CustomCursor from '@/components/CustomCursor'
 import SocialButtons from '@/components/SocialButtons'
 import { PageTransitionProvider } from '@/components/PageTransition'
 import { Analytics } from '@vercel/analytics/next'
+import ConditionalSocialButtons from '@/components/ConditionalSocialButtons'
 
 export const metadata: Metadata = {
   title: 'Fleurig Thús - Huishoudelijke hulp met een hart | Leeuwarden | Friesland',
@@ -43,7 +44,7 @@ export default function RootLayout({
           <div className="grain-overlay" />
           <CustomCursor />
           <Navigation />
-          <SocialButtons />
+          <ConditionalSocialButtons />
           <main>
             <PageTransitionProvider>
               {children}
