@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
       <p>Verdeel grote taken over de week. Bijvoorbeeld: maandag stofzuigen, dinsdag badkamer, woensdag keuken, etc. Zo wordt schoonmaken minder overweldigend en blijft uw huis constant netjes.</p>
 
       <div class="tip-box">
-        <h3>💡 Extra tip</h3>
+        <h3> Extra tip</h3>
         <p>Zet een timer voor 15 minuten en doe zoveel mogelijk in die tijd. Je zult versteld staan hoeveel je kunt bereiken met gefocust werken!</p>
       </div>
 
