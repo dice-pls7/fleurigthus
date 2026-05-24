@@ -14,7 +14,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    slug: '5-schoonmaak-tips',
+    slug: '5-schoonmaak-tips', //x
     category: 'Tips',
     title: '5 Praktische schoonmaaktips voor een fris huis',
     excerpt: 'Ontdek eenvoudige manieren om uw huis georganiseerd en schoon te houden, ook met een druk leven.',
