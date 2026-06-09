@@ -73,7 +73,6 @@ export const blogPosts: BlogPost[] = [
     date: '09 Juni 2026',
     readTime: '4 min',
     featured: false,
-    image: '/images/We zijn allemaal mens.jpeg',
     content: `
       <p class="intro">Soms vragen mensen mij hoe het is om bij zoveel verschillende mensen thuis te komen.</p>
 
