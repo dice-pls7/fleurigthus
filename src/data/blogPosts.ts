@@ -64,17 +64,40 @@ export const blogPosts: BlogPost[] = [
       <p>Hoe verdeel jij jouw huishouden door de week? Of ben jij meer van één grote schoonmaakdag?</p>
     `
   },
-  // {
-  //   id: 3,
-  //   slug: 'de-kracht-van-verbinding',
-  //   category: 'Verhalen',
-  //   title: 'De kracht van verbinding',
-  //   excerpt: 'Waarom persoonlijk contact zo belangrijk is in huishoudelijke hulp.',
-  //   date: '10 Dec 2024',
-  //   readTime: '4 min',
-  //   featured: false,
-  //   content: '<p>Binnenkort beschikbaar...</p>'
-  // },
+  {
+    id: 2,
+    slug: 'we-zijn-allemaal-mens',
+    category: 'Verhalen',
+    title: 'We zijn allemaal mens',
+    excerpt: 'Soms vragen mensen mij hoe het is om bij zoveel verschillende mensen thuis te komen. En eerlijk? Dat is juist wat ik zo mooi vind aan mijn werk.',
+    date: '09 Juni 2026',
+    readTime: '4 min',
+    featured: false,
+    image: '/images/We zijn allemaal mens.jpeg',
+    content: `
+      <p class="intro">Soms vragen mensen mij hoe het is om bij zoveel verschillende mensen thuis te komen.</p>
+
+      <p>En eerlijk? Dat is juist wat ik zo mooi vind aan mijn werk.</p>
+
+      <p>Geen dag is hetzelfde. De ene keer stap ik binnen bij een jong stel dat net samenwoont. De andere keer bij een druk gezin waar de dagen voorbij vliegen. En soms kom ik bij oudere mensen die wat extra hulp kunnen gebruiken omdat het niet meer lukt om alles zelf bij te houden.</p>
+
+      <p>Achter iedere voordeur zit een ander verhaal.</p>
+
+      <p>Sommige mensen vinden het fijn om tijdens het werk even een praatje te maken. Gewoon omdat ze behoefte hebben aan wat gezelschap. Anderen hebben het juist zo druk dat een rustig gesprek en een opgeruimd huis even een moment van ademruimte geven.</p>
+
+      <p>En dat is helemaal oké.</p>
+
+      <p>We hebben allemaal periodes waarin we hulp kunnen gebruiken. Of dat nu is omdat het druk is, omdat we ouder worden of omdat het gewoon fijn is als iemand een handje helpt.</p>
+
+      <p>Ik kom niet om te oordelen. Ik kom om te helpen.</p>
+
+      <p>Een schoon en opgeruimd huis is natuurlijk belangrijk, maar voor mij gaat het ook om iets anders. Om aandacht. Om vertrouwen. Om ervoor zorgen dat iemand zich prettig voelt in zijn of haar eigen thuis.</p>
+
+      <p>Want uiteindelijk zijn we allemaal mens. En soms kan een beetje hulp of een vriendelijk praatje al een groot verschil maken.</p>
+
+      <p class="signature">– Keke, Fleurig Thús 🌷</p>
+    `
+  },
   // {
   //   id: 3,
   //   slug: 'natuurlijke-schoonmaakmiddelen',
